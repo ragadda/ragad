@@ -38,18 +38,21 @@ public class ItemController {
     }
 
     @PutMapping(value = "/update_quantity")
-    public void updateItemquantity(@RequestParam(value = "item_id") Integer itemId,@RequestParam Integer quantity){
+    public void updateItemQuantity(@RequestParam(value = "item_id") Integer itemId,@RequestParam Integer quantity){
         itemService.updateItemQuantity(itemId,quantity);
     }
 
     @GetMapping(value = "/get_item_by_id")
-    public Item getItemById(Integer itenId){
-        return itemService.getItemByitemId(itenId);
+    public Item getItemById(Integer itemId){
+        return itemService.getItemByitemId(itemId);
     }
     @GetMapping(value = "/get_all")
     public List<Item> getItemById(){
         return itemService.getAllItems();
     }
-
+    @GetMapping(value = "/get_item_by_order_id")
+    List<Item> getItemByOrderId(Integer orderId){
+        return itemService.getItemByOrderId(orderId);
+    }
 
 }//end class

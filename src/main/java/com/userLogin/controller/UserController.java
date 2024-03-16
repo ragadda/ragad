@@ -45,6 +45,14 @@ public class UserController {
     public void updateUserEmail(@RequestParam(value = "user_id") Integer id,@RequestParam String address){
         userService.updateUserAddress(id,address);
     }
+    @PutMapping(value = "/update_phone")
+    public void updateUserPhone(@RequestParam(value = "user_id") Integer id,@RequestParam String phone){
+        userService.updateUserPhone(id,phone);
+    }
+    @PutMapping(value = "/update_address")
+    public void updateUserImg(@RequestParam(value = "user_id") Integer id,@RequestParam String img){
+        userService.updateUserImg(id,img);
+    }
     @DeleteMapping(value = "/delete")
     public void deleteUserById(@RequestParam(value = "user_id") Integer id){
         userService.deleteUserById(id);

@@ -1,13 +1,20 @@
 package com.userLogin.model;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.time.LocalDate;
 
 public class Order {
+    @JsonProperty("order_id")
     private Integer orderId;
+    @JsonProperty("user_id")
     private Integer userId;
+    @JsonProperty("order_date")
     private LocalDate orderDate;
+    @JsonProperty("shipping_address")
     private String shippingAddress;
+    @JsonProperty("total_price")
     private double totalPrice;
     private OrderStatus status;
 

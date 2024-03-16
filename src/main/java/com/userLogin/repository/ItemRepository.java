@@ -15,7 +15,7 @@ public interface ItemRepository {
     void updateItemQuantity(Integer itemId,Integer quantity);
 
     Item getItemByitemId(Integer itemId);
-    Item getItemByOrderId(Integer orderId);
+    List<Item> getItemByOrderId(Integer orderId);
     List<Item> getAllItems();
 
 }//end class

@@ -48,7 +48,7 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public Item getItemByOrderId(Integer orderId) {
+    public  List<Item> getItemByOrderId(Integer orderId) {
         return itemRepository.getItemByOrderId(orderId);
     }
 

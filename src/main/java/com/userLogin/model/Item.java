@@ -1,7 +1,11 @@
 package com.userLogin.model;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Item {
+
+    @JsonProperty("item_id")
     private Integer itemId;
     private String title;
     private String img;
