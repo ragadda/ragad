@@ -11,13 +11,27 @@ public class Item {
     private String img;
     private double price;
     private int quantity;
+    private String category;
 
-    public Item(Integer itemId, String title, String img, double price, int quantity) {
+    public Item(Integer itemId, String title, String img, double price, int quantity ,String category) {
         this.itemId = itemId;
         this.title = title;
         this.img = img;
         this.price = price;
         this.quantity = quantity;
+        this.category=category;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public Integer getItemId() {

@@ -39,6 +39,7 @@ CREATE TABLE item (
    img varchar(255) NOT NULL DEFAULT '',
    price DOUBLE NOT NULL,
    quantity INT NOT NULL DEFAULT '',
+   category varchar(255) NOT NULL DEFAULT '',
    PRIMARY KEY (id)
 );
 
